@@ -93,6 +93,10 @@ const response = await fetch('/api/filters');
 const data = await response.json();
 // Returns: { types: ["Fraud", "Assault", ...], neighbourhoods: ["Nutana", ...] }
 ```
+or
+```
+http://localhost:5000/api/filters
+```
 
 ## Data Structure
 ### Crime Record Fields:
