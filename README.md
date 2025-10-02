@@ -49,6 +49,10 @@ const response = await fetch('/api/map-data?limit=2000');
 const data = await response.json();
 // Returns: { Uuid, Latitude, Longitude, Type }
 ```
+or in browser visit:
+```
+http://localhost:5000/api/map-data?limit=2000
+```
 
 ### 2. Single Crime Details
 #### GET `/crime/:id`
@@ -59,6 +63,10 @@ const data = await response.json();
 const response = await fetch('/api/crime/fb363318-e145-494e-b7fb-a4185bb8ac48');
 const data = await response.json();
 // Returns: Full crime record with all columns
+```
+or in browser visit:
+```
+http://localhost:5000/api/crime/fb363318-e145-494e-b7fb-a4185bb8ac48
 ```
 
 ### 3. Filtered Crimes
@@ -82,6 +90,10 @@ fetch('/api/crimes?neighbourhood=Nutana')
 // Cases of Fraud in Nutana from June 1st till.
 fetch('/api/crimes?type=Fraud&neighbourhood=Nutana&startDate=2024-06-01')
 ```
+or in browser visit:
+```
+http://localhost:5000/api/crimes?type=Fraud&neighbourhood=Nutana&startDate=2024-06-01
+```
 
 ### 4. Available Filters
 #### GET `/filters`
@@ -93,7 +105,7 @@ const response = await fetch('/api/filters');
 const data = await response.json();
 // Returns: { types: ["Fraud", "Assault", ...], neighbourhoods: ["Nutana", ...] }
 ```
-or
+or in browser visit:
 ```
 http://localhost:5000/api/filters
 ```
