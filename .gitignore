@@ -1,0 +1,14 @@
+# Environment
+.env
+.env.local
+
+# Dependencies
+node_modules/
+server/node_modules/
+client/node_modules/
+
+# Logs
+*.log
+
+# Windows
+Thumbs.db
