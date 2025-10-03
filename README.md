@@ -113,7 +113,7 @@ http://localhost:5000/api/filters
 ## Data Structure
 ### Crime Record Fields:
 - `Uuid`: Unique identifier (use for detail lookups)
-- `Reported Date`: When crime was reported
+- `ReportedDate`: When crime was reported
 - `Type`: Crime category (Theft, Assault, Fraud, etc.)
 - `Location`: Street address
 - `Neighbourhood`: Area of city

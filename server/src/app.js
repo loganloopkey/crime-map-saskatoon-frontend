@@ -55,7 +55,7 @@ app.get('/api/map-data', async(req, res) => {
       FROM public.sps_2024 
       WHERE "Latitude" IS NOT NULL 
         AND "Longitude" IS NOT NULL
-      ORDER BY "Reported Date" DESC 
+      ORDER BY "ReportedDate" DESC 
       LIMIT $1
     `, [limit]);
 
@@ -118,18 +118,18 @@ app.get('/api/crimes', async (req, res) => {
 
     if (startDate) {
       paramCount++; // Move to next param position
-      query += ` AND "Reported Date" >= $${paramCount}`;
+      query += ` AND "ReportedDate" >= $${paramCount}`;
       params.push(startDate); // Add actual value to params array
     }
 
     if (endDate) {
       paramCount++; // Move to next param position
-      query += ` AND "Reported Date" <= $${paramCount}`;
+      query += ` AND "ReportedDate" <= $${paramCount}`;
       params.push(endDate); // Add actual value to params array
     }
 
     // Add Sorting and Limit
-    query += ` ORDER BY "Reported Date" DESC LIMIT $${paramCount + 1}`;
+    query += ` ORDER BY "ReportedDate" DESC LIMIT $${paramCount + 1}`;
     params.push(parseInt(limit)); // Add limit as last parameter
 
     // Execute Query

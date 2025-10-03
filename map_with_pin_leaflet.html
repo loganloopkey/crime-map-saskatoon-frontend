@@ -45,9 +45,11 @@
             fetch('http://localhost:5000/api/map-data?limit=2000')
                 .then(response => response.json())
                 .then(data => {
+                    // if data is successfully loaded then it calls the addMarkersToMap function with the data
                     if(data.success){
                         addMarkersToMap(data.data);
                     } else {
+                        // prints error message to console if data fails to load
                         console.error('Failed to load crime data');
                     }
                 })
@@ -56,10 +58,47 @@
             function addMarkersToMap(crimeData){
                 // makes a circle for each crime in the data and adds it to the map at the latitude and longitude of the crime
                 crimeData.forEach(crime => {
-                    const cirlce = L.circle([crime.Latitude, crime.Longitude]).addTo(map);
-                })
-            }
+                    const circle = L.circle([crime.Latitude, crime.Longitude], {
+                            color: 'red',
+                            fillColor: '#f03',
+                            fillOpacity: 0.5,
+                            radius: 50
+                }).addTo(map);
+                
 
+                // adds a click event to each circle that fetches the details of the crime from the api using the crime's uuid
+                // if the details are successfully loaded then it binds a popup to the circle with the details
+                circle.on('click', () => {
+                    // fetches the details of the crime from the database using its uuid
+                    fetch(`http://localhost:5000/api/crime/${crime.Uuid}`)
+                        // if the response is successful then it converts it to json
+                        .then(response => response.json())
+                        .then(result => {
+                            // if the details are successfully loaded then it binds a popup to the circle with the details
+                            if(result.success){
+                                // gets the data from the response
+                                const crimeDetails = result.data;
+                                /// binds a popup to the circle with the details of the crime. Matches time reported, type of crime, location, neighbourhood, and description to crime details
+                                circle.bindPopup(`
+                                <b>Time Reported:</b> ${crimeDetails.ReportedDate ? new Date(crimeDetails.ReportedDate).toLocaleString() : 'Unknown'}<br>
+                                <b>Type:</b> ${crimeDetails.Type}<br>
+                                <b>Location:</b> ${crimeDetails.Location || 'Unknown'}<br>
+                                <b>Neighbourhood:</b> ${crimeDetails.Neighbourhood || 'Unknown'}<br>
+                                <b>Description:</b> ${crimeDetails.Description || 'No description available'}<br>
+                                `);
+                            } else {
+                                // prints error message to console if details fail to load
+                                circle.setPopupContent('Failed to load crime details');//.openPopup();                     
+                            }
+                        })
+                        // if there is an error fetching the details then it logs the error to the console and sets the popup content to an error message
+                        .catch(error => {
+                            console.error('Error fetching crime details:', error);
+                            circle.setPopupContent('Error loading crime details').openPopup();
+                        });
+                });
+            });
+        }
         </script>
     </body>
 </html>
