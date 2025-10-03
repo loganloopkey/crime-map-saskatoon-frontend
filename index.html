@@ -8,9 +8,12 @@
         <!--sets title of the map to Crime Map - Saskatoon-->
         <title>Crime Map - Saskatoon</title>
 
+        <link rel="stylesheet" href="client/style.css">
+
+
         <!-- adds the package of the map tiler from the leaflet website cloud.maptiler -->
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>-->
         
         <!-- sets the map to take up the whole screen -->
         <style>
@@ -23,6 +26,9 @@
         <!-- create a div for the map to be displayed in -->
         <div id="map" ></div>
         <script>
+
+            src="client/script.js">
+
 
             // Initialize the map
             var map = L.map('map');
