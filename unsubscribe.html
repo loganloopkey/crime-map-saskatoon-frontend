@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unsubscribe Confirmation - Saskatoon Crime Map</title>
+  <!-- CSS Style Files -->
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/subscribe.css">
+  <link rel="stylesheet" href="css/unsubscribe.css">
+</head>
+<body>
+    <!-- Navigation Banner -->
+    <nav class="nav-banner">
+        <div class="nav-container">
+                <!-- <div class="nav-logo">Saskatoon Crime Map</div> -->
+                <ul class="nav-links">
+                <li><a href="map_with_pin_leaflet.html">Crime Map</a></li>
+                <li><a href="subscribe.html">Subscribe to Newsletter</a></li>
+                <li><a href="client/analytics.html">Analytics</a></li>
+                <li><a href="unsubscribe.html" class="active">Unsubscribe</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a id="log-in-nav-tab" href="log-in.html">Log In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+    <div class="header">
+      <h1>Unsubscribe Confirmation</h1>
+      <p>Manage your email preferences</p>
+    </div>
+
+    <div class="content">
+        <!-- This may be able to be populated by JavaScript from URL parameters -->
+        <div id="confirmationSection">
+            <div class="confirmation-box">
+                <h3>Are you sure you want to unsubscribe?</h3>
+                <p>You will stop receiving crime updates for your selected areas.</p>
+                <p>Email: <span id="userEmail" class="email-display">Loading...</span></p>
+            </div>
+
+            <div class="button-group">
+                <button id="confirmUnsubscribeBtn" class="btn-danger">Yes, Unsubscribe Me</button>
+            </div>
+        </div>
+    <!-- Success message (hidden by default) -->
+    <div id="successSection" style="display: none;">
+        <div class="message success">
+            <h3>You have been unsubscribed</h3>
+            <p>You will no longer receive crime update emails.</p>
+            <p>We're sorry to see you go!</p>
+        </div>
+            <div class="button-group">
+                <button onclick="window.location.href='subscribe.html'" class="btn-primary">Resubscribe</button>
+                <button onclick="window.location.href='map_with_pin_leaflet.html'" class="btn-secondary">Back to Map</button>
+            </div>
+        </div>
+
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+
+    <script src="js/unsubscribe.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>

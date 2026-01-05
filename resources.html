@@ -1,0 +1,120 @@
+ <!-- author Finch Nygren -->
+  
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Resources</title>
+        <link rel="stylesheet" href="css/resources.css"> 
+        <link rel="stylesheet" href="css/navigation.css">
+        <script src="js/resources.js"></script>
+  
+    </head>
+
+    <body>
+
+
+        <!-- Navigation Banner | Author: Alan Fogel -->
+        <nav class="nav-banner">
+            <div class="nav-container">
+                <!-- <div class="nav-logo">Saskatoon Crime Map</div> -->
+                <ul class="nav-links">
+                    <li><a href="map_with_pin_leaflet.html">Crime Map</a></li>
+                    <li><a href="subscribe.html">Subscribe to Newsletter</a></li>
+                    <li><a href="client/analytics.html">Analytics</a></li>
+                    <li><a href="resources.html" class="active">Resources</a></li>
+                    <li><a id="log-in-nav-tab" href="log-in.html">Log In</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--navigation bar ends-->
+
+
+        <ul id="resource-box-encasing" class="resource-box-encasing"> <!-- wrap for all the resources -->
+       
+            <div class="resources-title">
+                <h1>Resources</h1>
+            </div>
+
+
+            <input type="text" id="resource-search-box" onkeyup="searchResources()" placeholder="Search by Website Title..." title="Type in a category">
+
+
+            <li id="resource-box" class="resource-box">
+                <div class="img-box">
+                    <img src="images/CoSlogo.png">
+                </div>
+                <div class="resource-info">
+                    <!-- <h5 class="resource-subtitle">subtitle text</h5> -->
+                    <a class="resource-title" href="https://www.saskatoon.ca/who-call-important-numbers" >City of Saskatoon -- Public Concerns About Animal Welfare</a>
+                    <p class="resource-info-text">List of resources to call in regards to animal and wildlife welfare.</p>
+                </div>
+            </li>
+
+            <li id="resource-box" class="resource-box">
+                <img src="images/SCrimestopLogo.jpg">
+                <div class="resource-info">
+                    <a class="resource-title" href="https://saskcrimestoppers.com/about-us/" >Saskatchewan Crime Stoppers</a>
+                    <p class="resource-info-text">Submit anonymous tips about a crime.</p>
+                </div>
+            </li>
+            
+            <li id="resource-box" class="resource-box">
+                <img src="images/saskatoon-police-logo-png_seeklogo-217168GRAYSCALE.png">
+                <div class="resource-info">
+                    <a class="resource-title" href="https://saskatoonpolice.ca/victim/" >Saskatoon Victim Services</a>
+                    <p class="resource-info-text">Services for victims of personal crimes, property crimes, and fatal accidents.</p>
+                </div>
+            </li>
+
+            <li id="resource-box" class="resource-box">
+                <img src="images/sasktip-logo326x350.png">
+                <div class="resource-info">
+                    <a class="resource-title" href="https://www.saco.ca/programs/sasktip/">Saskatchewan Turn in Poachers and Polluters</a>
+                    <p class="resource-info-text">Link to report poached wildlife to Conservation officers.</p>
+                </div>
+            </li>
+
+            <li id="resource-box" class="resource-box">
+                <img src="images/sasksafetyCouncilLogo.jpg">
+                <div class="resource-info">
+                    <a class="resource-title" href="https://www.sasksafety.org/community-safety-resources.html">Saskatchewan Safety Council </a>
+                    <p class="resource-info-text">A bunch of resources ranging from bicycle safety to financial literacy and mental health.</p>
+                </div>
+            </li>
+
+            <li id="resource-box" class="resource-box">
+                <img src="images/PLEA logo.png">
+                <div class="resource-info">
+                    <a class="resource-title" href="https://plea.org/">The Public Legal Education Association of Saskatchewan</a>
+                    <p class="resource-info-text">Saskatchewan based free legal information.</p>
+                </div>
+            </li>
+
+            <li id="resource-box" class="resource-box">
+                <img src="images/CoSlogo.png">
+                <div class="resource-info">
+                    <a class="resource-title" href="https://www.saskatoon.ca/services-residents/connect-your-city/use-our-online-services#report">City of Saskatoon - Report</a>
+                    <p class="resource-info-text">Report non-crime events such as street light outages, potholes, and many other general concerns.</p>
+                </div>
+            </li>
+
+            <div id="no-match"></div>
+
+        </ul>
+
+        <script src="js/navigation.js"></script>    <!-- Controls log in tab -->
+
+    </body>
+</html>
+
+
+
+<!-- https://www.saskatoon.ca/ -->
+<!-- <a href="https://www.sasksafety.org/community-safety-resources.html"></a> --> <!--Saskatchewan Safety Council - Community Safety Resources-->
+<!-- <a href="https://plea.org/" ></a> --> <!--The Public Legal Education Association of Saskatchewan-->
+<!-- <a href="https://www.saco.ca/programs/sasktip/" ></a> --> <!--SaskTIP (Turn in Poachers)-->
+<!-- <a href="https://saskatoonpolice.ca/victim/" ></a> --> <!--Saskatoon Police Victim Services-->
+<!-- <a href="https://saskcrimestoppers.com/about-us/" ></a> --> <!--Crimestoppers-->
+<!-- <a href="https://ocre-sielc.rcmp-grc.gc.ca/saskatchewan/en" ></a> --> <!--RCMP Online Crime Reporting-->
+<!-- <a href="https://www.saskatoon.ca/who-call-important-numbers" ></a> --> <!--City of Saskatoon -- Public Concerns About Animal Welfare-->

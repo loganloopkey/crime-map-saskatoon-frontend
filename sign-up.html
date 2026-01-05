@@ -1,0 +1,83 @@
+
+<!--author Finch Nygren-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="css/styles.css">  
+        <link rel="stylesheet" href="css/navigation.css">
+  
+    </head>
+
+    <body >
+
+        <!--navigation bar starts-->
+         <!-- Navigation Banner | Author: Alan Fogel -->
+        <nav class="nav-banner">
+            <div class="nav-container">
+                <!-- <div class="nav-logo">Saskatoon Crime Map</div> -->
+                <ul class="nav-links">
+                    <li><a href="map_with_pin_leaflet.html" class="active">Crime Map</a></li>
+                    <li><a href="subscribe.html">Subscribe to Newsletter</a></li>
+                    <li><a href="client/analytics.html">Analytics</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a id="log-in-nav-tab" href="log-in.html">Log In</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--navigation bar ends-->
+
+
+        <div class="sign-up-title">
+            <h1>Sign Up</h1>
+        </div>
+        
+
+        <!--input area begins-->
+        <div class="sign-up-input-area-frame">
+            <!-- THIS is for if we want an area beside the log in box, similar to how some businesses would have their hours posted here, but instead we would have some sort of spiel about logging in, or maybe a random crime fact about Saskatoon
+                    
+                    <div class="beside-log-in">
+                        <h6>Log in to self-report crime in an area</h6>
+                    </div>-->
+        
+        
+
+            <div id="errorMessage" style="display: none; color: red;">
+                Problem signing up. Please try again.
+            </div>
+
+
+            <div class="sign-up-input-area" id="sign-up-input-area">
+                <form id="sign-up-form" >
+
+                    <label for="user-email">Email:</label>
+                    <input id="user-email-signup" class="user-email" name="user-email"><br>
+        
+                    <div>
+                        <p class="invalid-email-message"><strong></strong></p>
+                    </div>
+
+                    <label for="user-password">Password:</label>
+                    <input type="password" id="user-password-signup" name="user-password" class="user-password" required><br>
+        
+                    <div>
+                        <p class="invalid-pass-message"><strong></strong></p>
+                    </div>
+        
+                    <input id="submit-btn-signup" type="submit" disabled="true" value="Sign Up" class="login-n-signup-btns">
+                </form>
+
+                <div class="logged-in-message"></div>
+        
+            </div>
+        
+        </div>
+        <!--input area ends-->
+
+        <script src="js/sign-up-and-log-in.js"></script> 
+    </body>
+</html>
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--starts html and sets page default language to english-->
+<html lang="en">
+
+    <head> 
+        <!--sets page view to be able to fit on both computer and mobile device-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--sets title of the map to Crime Map - Saskatoon-->
+        <title>Crime Map - Saskatoon</title>
+
+        <!-- adds the package of the map tiler from the leaflet website cloud.maptiler -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <!-- Our css sheets -->
+        <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- sets the map to take up the whole screen -->
+        <style>
+            #map {position: absolute; top: 0; bottom: 0; right: 0; left: 0;}
+        </style>
+    
+    </head>
+    <body>
+         <!-- Navigation Banner | Author: Alan Fogel -->
+        <nav class="nav-banner">
+            <div class="nav-container">
+                <!-- <div class="nav-logo">Saskatoon Crime Map</div> -->
+                <ul class="nav-links">
+                    <li><a href="map_with_pin_leaflet.html" class="active">Crime Map</a></li>
+                    <li><a href="subscribe.html">Subscribe to Newsletter</a></li>
+                    <li><a href="client/analytics.html">Analytics</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a id="log-in-nav-tab" href="log-in.html">Log In</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Map Controls -->
+        <!-- create a div for the map controls to be displayed in  | Author: Alan Fogel -->
+        <div id="controls"> 
+            <button id="checkAreaBtn">Check My Area</button>
+            <button id="showAllBtn">Show All Crimes</button>
+            <div id="dateFilter">
+                <label for="dateRange">Time Range:</label>
+                <select id="dateRange">
+                    <option value="7">Last 7 days</option>
+                    <option value="14">Last 14 days</option>
+                    <option value="30">Last 30 days</option>
+                    <option value="90">Last 90 days</option>
+                    <option value="365">Last year</option>
+                    <option value="all">All time</option>
+                </select>
+            </div>
+            <div id="locationStatus">Ready to check your area</div>
+            <div id="modeIndicator">Mode: Viewing all crimes</div>
+        </div>
+
+        <!-- Add a sidebar for crime list  | Author: Alan Fogel-->
+         <div id="crimeList">
+            <h3 style="margin-top: 0;">Recent Crimes (Last 7 Days)</h3>
+            <div id="crimeItems"></div>
+        </div>
+
+        <!-- Add a Drop Pin button to the map-->
+        <button 
+            id="DropPinBtn" 
+            style="position: absolute; bottom: 20px; left: 20px; z-index: 1000;"
+            >
+                Drop Pin
+            </button>
+
+
+        <!-- Add spsCrime/personalIncidents filter checkboxes to the map-->
+        <div id="filterButtons">
+            <label><input type="checkbox" id="personalChkBx" checked> Personal Incidents</label>
+            <label><input type="checkbox" id="spsChkBx" checked> SPS Crime Data</label>
+        </div>
+
+
+
+        <!-- create a div for the map to be displayed in -->
+        <div id="map" ></div>
+        
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script> <!--turf for storing neighbourhood when clicked within polygon-->
+        <!-- <script src="js/neighbourhoods.geojson"></script> geojson of polygons of all neighbourhoods -->
+        <script src="js/markers.js"></script>       <!--where marker functions are stored-->
+        <script src="js/map-core.js"></script>      <!-- Creates the map -->
+        <script src="js/safety-check.js"></script>  <!-- Uses the map -->
+        <script src="js/navigation.js"></script>    <!-- Controls log in tab -->
+    </body>
+</html>

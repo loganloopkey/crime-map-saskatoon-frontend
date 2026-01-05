@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscribe to City Updates - Saskatoon Crime Map</title>
+  <!-- CSS Style Files -->
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/subscribe.css">
+</head>
+<body>
+  <!-- Navigation Banner -->
+   <nav class="nav-banner">
+    <div class="nav-container">
+        <!-- <div class="nav-logo">Saskatoon Crime Map</div> -->
+         <ul class="nav-links">
+        <li><a href="map_with_pin_leaflet.html">Crime Map</a></li>
+        <li><a href="subscribe.html" class="active">Subscribe to Newsletter</a></li>
+        <li><a href="client/analytics.html">Analytics</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a id="log-in-nav-tab" href="log-in.html">Log In</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Subscription form (copy from Anmol's subscribe.ejs) -->
+  <div class="container">
+    <div class="header">
+      <h1>Stay Informed</h1>
+      <p>Subscribe to receive updates about your selected city areas</p>
+    </div>
+
+    <div class="content">
+      <form id="subscribeForm" novalidate>
+        <div class="form-group">
+          <label for="name">First Name *</label>
+          <input type="text" id="name" name="name" required maxlength="50" placeholder="Enter your first name">
+        </div>
+
+        <div class="form-group">
+          <label for="surname">Last Name *</label>
+          <input type="text" id="surname" name="surname" required maxlength="50" placeholder="Enter your last name">
+        </div>
+
+        <div class="form-group">
+          <label for="username">Username *</label>
+          <input type="text" id="username" name="username" required maxlength="30" placeholder="Choose a username (letters and numbers only)" pattern="[a-zA-Z0-9]+">
+          <div class="form-hint">Only letters and numbers are allowed</div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required maxlength="100" placeholder="your.email@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="cityAreas">Select Your City Areas</label>
+          <select id="cityAreas" name="cityAreas" multiple size="5">
+            <!-- Options loaded dynamically by JavaScript -->
+          </select>
+          <div class="form-hint">
+            Hold Ctrl (or Cmd on Mac) to select multiple areas. Leave empty to receive updates for all areas.
+            Maximum 10 areas allowed.
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="submit" class="btn-primary" id="submitBtn">
+            Subscribe Now
+          </button>
+          <button type="button" class="btn-secondary" onclick="window.location.href='map_with_pin_leaflet.html'">
+            Back to Map
+          </button>
+        </div>
+      </form>
+
+      <div id="message" class="message"></div>
+    </div>
+
+    <div class="footer">
+      <p>Need to unsubscribe? <a href="unsubscribe.html">Click here</a></p>
+    </div>
+  </div>
+  
+  <!-- JavaScript Files -->
+  <script src="js/subscribe.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

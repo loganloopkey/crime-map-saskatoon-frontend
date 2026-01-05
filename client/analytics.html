@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saskatoon Crime Analytics Dashboard</title>
+  <!-- CSS Style Files -->
+  <link rel="stylesheet" href="../css/navigation.css">
+  <link rel="stylesheet" href="../css/analytics.css">
+  <!-- D3.js v7 from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <!-- Supabase JS Client from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <!-- Navigation Banner -->
+  <nav class="nav-banner">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="../map_with_pin_leaflet.html">Crime Map</a></li>
+        <li><a href="../subscribe.html">Subscribe to Newsletter</a></li>
+        <li><a href="analytics.html" class="active">Analytics</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+        <li><a id="log-in-nav-tab" href="../log-in.html">Log In</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Analytics Dashboard -->
+  <div class="container">
+    <div class="header">
+      <h1>Saskatoon Crime Analytics Dashboard</h1>
+    </div>
+
+    <div class="content">
+      <!-- Filter Section -->
+      <div class="filter-section">
+        <h2>Filter Data</h2>
+        <div class="filter-controls">
+          <div class="filter-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" class="filter-input">
+          </div>
+          <div class="filter-group">
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate" class="filter-input">
+          </div>
+          <div class="filter-group">
+            <label for="neighbourhood">Neighbourhood</label>
+            <select id="neighbourhood" class="filter-input">
+              <option value="">All Neighbourhoods</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <button id="applyFilters" class="btn-apply">Apply Filters</button>
+            <button id="resetFilters" class="btn-reset">Reset</button>
+          </div>
+        </div>
+        <div id="loadingMessage" class="loading-message" style="display: none;">
+          Fetching updated data…
+        </div>
+      </div>
+
+      <!-- Crime Type Bar Chart -->
+      <div class="chart-section">
+        <h2>Crime Types Distribution</h2>
+        <div id="crimeTypeChart"></div>
+        <p class="chart-summary">Displays the total number of reported crimes by type.</p>
+      </div>
+
+      <!-- Crime Trend Line Chart -->
+      <div class="chart-section">
+        <h2>Crime Trends Over Time</h2>
+        <div id="crimeTrendChart"></div>
+        <p class="chart-summary">Shows monthly trends to observe changes in crime activity over time.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Crime Analytics Dashboard</p>
+  </footer>
+  
+  <!-- JavaScript Files -->
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/analytics.js"></script>
+  <!-- <script src="js/navigation.js"></script>-->      <!--Controls log in tab -- will break though on this page because of structure -- all html has to be in the same folder to work  -->
+
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+/* css/unsubscribe.css */
+.confirmation-box {
+      text-align: center;
+      padding: 30px;
+      background: #fff3cd;
+      border: 1px solid #ffeaa7;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    
+    .email-display {
+      font-weight: bold;
+      color: #c0392b;
+      font-size: 1.1em;
+    }
+    
+    .btn-danger {
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
+      color: white;
+    }
+    
+    .btn-danger:hover {
+      background: linear-gradient(135deg, #c0392b, #a93226);
+    }

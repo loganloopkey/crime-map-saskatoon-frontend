@@ -1,0 +1,115 @@
+/* author Finch Nygren */
+
+body {
+    background-color: #36414A;
+}
+
+
+.resources-title {
+    text-shadow: #555;
+    text-shadow: 1px 1px 2px;
+    font-size: large;
+    padding-top: 3%;
+    margin-left: -2%;
+    animation: fadeEffect 1.5s;
+}
+
+.resource-box-encasing {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 10%;
+    padding-top: 0;
+    list-style-type: none;
+    animation: fadeEffect 1.5s;
+    min-width: 350px;
+
+    background-color: #f0f8ff;
+    margin: 5%;
+    margin-top: 20px;
+    border-radius: 1%;
+}
+
+.resource-box-encasing input {
+    margin-bottom: 5%;
+    margin-right: 60%;
+    min-width: 200px;
+    background-color: #C4D0E0;
+    text-indent: 2%;
+}
+
+
+.resource-box-encasing input::placeholder {
+    color: #36414A;
+}
+
+.resource-box-encasing li + li {
+    margin-top: 8%;
+}
+
+
+.resource-box {
+    background-color: #d1dce7;
+    padding: 3%;
+    border-radius: 2%;
+}
+
+
+.resource-box img {
+    float: left;
+    width: 20%;
+    height: 20%;
+    padding-right: 3%;
+    min-width: 100px;
+}
+
+
+
+.resource-info {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 20%;
+    text-align: left;
+    min-width: 200px;
+}
+
+
+.resource-title {
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+
+.resource-title:link{
+    color: black;
+    text-decoration: none;
+}
+.resource-title:visited{
+    color: black;
+    text-decoration: none;
+}
+.resource-title:hover{
+    color: rgb(8, 30, 192);
+    text-decoration: underline;
+}
+.resource-title:active{
+    color: rgb(196, 187, 12);
+    text-decoration: underline;
+}
+
+
+.resource-info-text {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+
+@keyframes fadeEffect {  
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }    
+}

@@ -1,0 +1,254 @@
+/* Author: Logan Loopkey */
+#map {
+    position: absolute; 
+    top: 60px;  /* Height of navigation bar */
+    bottom: 0; 
+    right: 0; 
+    left: 0;
+}
+
+/* Author: Alan Fogel */
+#controls { 
+    position: absolute; 
+    top: 70px; 
+    left: 4%; 
+    z-index: 1000; 
+    padding: 1%; 
+}
+
+/* Author: Alan Fogel */
+#checkAreaBtn {
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Author: Alan Fogel */
+#checkAreaBtn:hover {
+    background: #0056b3;
+}
+
+/* Author: Alan Fogel */
+#checkAreaBtn:active {
+    transform: translateY(1px);
+}
+
+/* Author: Alan Fogel */
+#modeIndicator {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #555;
+    min-height: 16px;
+}
+
+/* Author: Alan Fogel */
+#locationStatus {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #555;
+    min-height: 16px;
+}
+
+/* Author: Alan Fogel */
+#showAllBtn {
+    margin-left: 10px;
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Author: Alan Fogel */
+#crimeList {
+    display: none;
+    position: absolute; 
+    top: 220px; 
+    left: 1%; 
+    width: 270px; 
+    max-height: 40%; 
+    overflow-y: auto; 
+    background-color: aliceblue;
+    padding: 10px; 
+    z-index: 1000; 
+}
+
+/* Author: Alan Fogel */
+#crimeList.visible {
+    display: block
+}
+
+/* Author: Alan Fogel */
+.crime-item {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+/* Author: Alan Fogel */
+.crime-item:hover {
+    background-color: #f0f8ff
+}
+
+/* Author: Alan Fogel */
+.crime-item:last-child {
+    border-bottom: none;
+}
+
+/* Author: Alan Fogel */
+#dateFilter {
+    margin-top: 8px;
+}
+
+/* Author: Alan Fogel */
+#dateFilter label {
+    font-size: 13px;
+    color: #555;
+    margin-right: 5px;
+}
+
+/* Author: Alan Fogel */
+#dateRange {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* Author: Logan Loopkey */
+#DropPinBtn {
+    background-color: rgb(73, 144, 188);
+    border: 2px solid #0d4dba; /* Blue */
+    color: rgb(253, 253, 253);
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+/* Author: Logan Loopkey */
+#DropPinBtn:hover {
+    background-color: #0d4dba; /* Darker blue on hover */
+}
+
+
+/* Author: Logan Loopkey */
+#submitBtn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Author: Logan Loopkey */
+.popup-title {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Author: Logan Loopkey */
+#filterButtons {
+    display: flex;
+    gap: 20px;
+    top: 70px; /* Moved downf or nav bar */
+    gap: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    color:black;
+    font-size: 25px;
+}
+
+/* Author: Logan Loopkey */
+.filter-btn {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #0d4dba;
+    background-color: rgb(73, 144, 188);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Author: Logan Loopkey */
+.filter-btn.active {
+    background-color: white;
+    color: #0d4dba;
+    font-weight: bold;
+}
+
+/* Author: Logan Loopkey */
+#filterButtons {
+    position: absolute;
+    top: 70px;  /* Moved down for nav bar */
+    right: 50px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+
+
+/* Log In Starts (Author Finch Nygren) -------------------------------------*/
+
+.log-in-title {
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.input-area-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* for if secondary container is added beside log in for some reason*/
+    /*flex-direction: row; */
+    margin-top: 0px;
+}
+
+/*secondary container beside log in*/
+/*.beside-log-in {
+max-width: 400px;
+padding: 10px;
+min-width: 350px;
+*/
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;   
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+/* Log In Ends (Author Finch Nygren) -------------------------------------*/
+
+
+
+
+    
